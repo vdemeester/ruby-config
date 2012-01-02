@@ -2,10 +2,16 @@
 # Author:       Vincent Demeester
 # License:      This file is licensed under the GPL v2
 # --------------------------------------------------------------------------- #
-# This file append PATH with rbenv if present. The init step of rbenv shouldn't
-# be there but in .shared_rc.d folder.
+# This file append PATH with rbenv and initialize it, if present
 # --------------------------------------------------------------------------- #
 if test -d $HOME/.rbenv; then
+    # append .rbenv/bin to PATH
     PATH=$HOME/.rbenv/bin:$PATH
+    command -v rbenv >/dev/null || {
+        echo ".shared_rc.d/rbenv: rbenv not in PATH, something is wrong…" >&2
+        return
+    }
+    # And initialize it !
+    eval "$(rbenv init -)"
 fi
 # vim:filetype=sh foldmethod=marker autoindent expandtab shiftwidth=4
