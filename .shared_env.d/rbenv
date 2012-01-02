@@ -1,0 +1,11 @@
+# Filename:     .shared_env.d/rbenv
+# Author:       Vincent Demeester
+# License:      This file is licensed under the GPL v2
+# --------------------------------------------------------------------------- #
+# This file append PATH with rbenv if present. The init step of rbenv shouldn't
+# be there but in .shared_rc.d folder.
+# --------------------------------------------------------------------------- #
+if test -d $HOME/.rbenv; then
+    PATH=$HOME/.rbenv/bin:$PATH
+fi
+# vim:filetype=sh foldmethod=marker autoindent expandtab shiftwidth=4
