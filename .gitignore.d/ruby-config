@@ -1,0 +1,7 @@
+*
+!.gitignore.d/ruby-config
+!.rbenv
+!.rbenv/*
+!.rbenv/**
+!.shared_env.d
+!.shared_env.d/rbenv
