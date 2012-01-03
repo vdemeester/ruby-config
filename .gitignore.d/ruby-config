@@ -1,7 +1,10 @@
 *
-!.gitignore.d/ruby-config
 !.rbenv
 !.rbenv/*
 !.rbenv/**
-!.shared_env.d
-!.shared_env.d/rbenv
+!.sh
+!.sh/hook
+!.sh/hook/shenv.post
+!.sh/hook/shenv.post/rbenv
+!.gitignore.d
+!.gitignore.d/ruby-config
