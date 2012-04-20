@@ -1,0 +1,21 @@
+[.rbenv/plugins/rbenv-bundler]
+lib =
+    GITHUB_USER=carsomyr
+checkout = github_clone
+
+[.rbenv/plugins/rbenv-gemset]
+lib =
+    GITHUB_USER=jamis
+checkout = github_clone
+
+[.rbenv/plugins/rbenv-vars]
+lib =
+    GITHUB_USER=sstephenson
+checkout = github_clone
+
+[.rbenv/plugins/rbenv-alternatives]
+lib =
+    GITHUB_USER=terceiro
+checkout = github_clone
+
+# vim:syntax=sh

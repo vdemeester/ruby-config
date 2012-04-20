@@ -2,6 +2,10 @@
 !.rbenv
 !.rbenv/*
 !.rbenv/**
+!.config
+!.config/mr
+!.config/mr/groups.d
+!.config/mr/groups.d/ruby-config
 !.sh
 !.sh/hook
 !.sh/hook/shenv.post
