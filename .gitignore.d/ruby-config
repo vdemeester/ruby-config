@@ -6,6 +6,8 @@
 !.config/mr
 !.config/mr/groups.d
 !.config/mr/groups.d/ruby-config
+!.cfg-post.d
+!.cfg-post.d/ruby-config
 !.sh
 !.sh/hook
 !.sh/hook/shenv.post

@@ -1,0 +1,15 @@
+#!/bin/bash
+update_gems() {
+    echo "Update gems for all versions ? (y/N)"
+    read UPDATE_GEMS
+    test -z "${UPDATE_GEMS}" && UPDATE_GEMS="n"
+    if test "${UPDATE_GEMS}" = "y"; then
+        for version in `ls --color=never $HOME/.rbenv/versions`; do
+            echo "Updating ${version%/}"
+            RBENV_VERSION="${version%/}" rbenv exec gem update
+            RBENV_VERSION="${version%/}" rbenv exec gem install bundler
+        done
+    fi
+}
+
+update_gems
