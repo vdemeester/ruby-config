@@ -1,8 +1,3 @@
-[.rbenv/plugins/rbenv-bundler]
-lib =
-    GITHUB_USER=carsomyr
-checkout = github_clone
-
 [.rbenv/plugins/rbenv-gemset]
 lib =
     GITHUB_USER=jamis
