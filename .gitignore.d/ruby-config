@@ -9,6 +9,9 @@
 !.cfg-post.d
 !.cfg-post.d/ruby-config
 !.sh
+!.sh/completions
+!.sh/completions/_gem
+!.sh/completions/_bundle
 !.sh/hook
 !.sh/hook/shenv.post
 !.sh/hook/shenv.post/rbenv
