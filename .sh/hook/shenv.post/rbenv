@@ -8,10 +8,19 @@ if test -d $HOME/.rbenv; then
     # append .rbenv/bin to PATH
     PATH=$HOME/.rbenv/bin:$PATH
     command -v rbenv >/dev/null || {
-        echo ".shared_rc.d/rbenv: rbenv not in PATH, something is wrong…" >&2
+        echo ".sh/hook/shenv.post/rbenv: rbenv not in PATH, something is wrong…" >&2
         return
     }
     # And initialize it !
     eval "$(rbenv init -)"
+    # Play around with MANPATH
+    rbenv local 1>/dev/null 2>&1
+    if test $? -gt 0; then
+        # No local version, using gloa
+        rbenv_version="$(rbenv global)"
+    else
+        rbenv_version="$(rbenv local)"
+    fi
+    export MANPATH="$HOME/.rbenv/versions/${rbenv_version}/share/man:$MANPATH"
 fi
 # vim:filetype=sh foldmethod=marker autoindent expandtab shiftwidth=4
