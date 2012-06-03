@@ -1,0 +1,10 @@
+# Filename:     .sh/hook/shrc.post/irb
+# Author:       Vincent Demeester
+# License:      This file is licensed under the GPL v2
+# --------------------------------------------------------------------------- #
+# Thi file set alias for irb
+# --------------------------------------------------------------------------- #
+IRB=`which irb`
+alias irb="$IRB --readline -r irb/completion"
+alias naked_irb="$IRB"
+# vim:filetype=sh foldmethod=marker autoindent expandtab shiftwidth=4

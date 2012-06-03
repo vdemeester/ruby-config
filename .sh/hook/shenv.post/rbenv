@@ -1,4 +1,4 @@
-# Filename:     .shared_env.d/rbenv
+# Filename:     .sh/hook/shenv.post/rbenv
 # Author:       Vincent Demeester
 # License:      This file is licensed under the GPL v2
 # --------------------------------------------------------------------------- #

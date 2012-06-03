@@ -15,5 +15,7 @@
 !.sh/hook
 !.sh/hook/shenv.post
 !.sh/hook/shenv.post/rbenv
+!.sh/hook/shrc.post
+!.sh/hook/shrc.post/irb
 !.gitignore.d
 !.gitignore.d/ruby-config
