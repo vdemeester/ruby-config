@@ -17,5 +17,9 @@
 !.sh/hook/shenv.post/rbenv
 !.sh/hook/shrc.post
 !.sh/hook/shrc.post/irb
+!.sh/hook/zshrc.pre
+!.sh/hook/zshrc.pre/chef
+!.chef
+!.chef/knife.rb
 !.gitignore.d
 !.gitignore.d/ruby-config
