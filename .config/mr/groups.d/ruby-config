@@ -1,3 +1,10 @@
+[.rbenv]
+lib =
+    GITHUB_USER=sstephenson
+    GIT_TAG=v0.4.0
+    MR_NAME=rbenv
+checkout = github_clone
+
 [.rbenv/plugins/rbenv-gemset]
 lib =
     GITHUB_USER=jamis
