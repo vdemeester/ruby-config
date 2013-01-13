@@ -1,11 +1,11 @@
 *
-!.rbenv
-!.rbenv/*
-!.rbenv/**
 !.config
 !.config/mr
 !.config/mr/groups.d
 !.config/mr/groups.d/ruby-config
+!.config/supervisor
+!.config/supervisor/common
+!.config/supervisor/common/gollum.conf
 !.cfg-post.d
 !.cfg-post.d/ruby-config
 !.sh
