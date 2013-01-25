@@ -10,6 +10,11 @@ lib =
     GITHUB_USER=jamis
 checkout = github_clone
 
+[.rbenv/plugins/rbenv-gem-rehash]
+lib =
+    GITHUB_USER=sstephenson
+checkout = github_clone
+
 [.rbenv/plugins/rbenv-vars]
 lib =
     GITHUB_USER=sstephenson
