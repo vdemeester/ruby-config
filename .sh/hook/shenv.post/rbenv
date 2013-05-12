@@ -4,7 +4,8 @@
 # --------------------------------------------------------------------------- #
 # This file append PATH with rbenv and initialize it, if present
 # --------------------------------------------------------------------------- #
-init_rbenv() {
+
+if $(command -v rbenv >/dev/null); then
     # And initialize it !
     eval "$(rbenv init -)"
     # Play around with MANPATH
@@ -16,21 +17,27 @@ init_rbenv() {
         rbenv_version="$(rbenv local)"
     fi
     export MANPATH="$HOME/.rbenv/versions/${rbenv_version}/share/man:$MANPATH"
-}
-
-command -v rbenv >/dev/null && {
-    init_rbenv
-} || {
-# Local installation ?
-if test -d $HOME/.rbenv; then
     # append .rbenv/bin to PATH
-    PATH=$HOME/.rbenv/bin:$PATH
+    PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
+# Local installation ?
+elif test -d $HOME/.rbenv; then
+    # append .rbenv/bin to PATH
+    PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
     command -v rbenv >/dev/null || {
         echo ".sh/hook/shenv.post/rbenv: rbenv not in PATH, something is wrong…" >&2
         return
     }
-    init_rbenv
+    # And initialize it !
+    eval "$(rbenv init -)"
+    # Play around with MANPATH
+    rbenv local 1>/dev/null 2>&1
+    if test $? -gt 0; then
+        # No local version, using gloa
+        rbenv_version="$(rbenv global)"
+    else
+        rbenv_version="$(rbenv local)"
+    fi
+    export MANPATH="$HOME/.rbenv/versions/${rbenv_version}/share/man:$MANPATH"
 fi
-}
 
 # vim:filetype=sh foldmethod=marker autoindent expandtab shiftwidth=4
