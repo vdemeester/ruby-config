@@ -18,11 +18,11 @@ if $(command -v rbenv >/dev/null); then
     fi
     export MANPATH="$HOME/.rbenv/versions/${rbenv_version}/share/man:$MANPATH"
     # append .rbenv/bin to PATH
-    PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
+    export PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
 # Local installation ?
 elif test -d $HOME/.rbenv; then
     # append .rbenv/bin to PATH
-    PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
+    export PATH=$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH
     command -v rbenv >/dev/null || {
         echo ".sh/hook/shenv.post/rbenv: rbenv not in PATH, something is wrong…" >&2
         return
