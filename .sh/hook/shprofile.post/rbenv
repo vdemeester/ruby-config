@@ -5,7 +5,7 @@
 # This file append PATH with rbenv and initialize it, if present
 # --------------------------------------------------------------------------- #
 
-#if $(command -v rbenv >/dev/null); then
+if $(command -v rbenv >/dev/null); then
     # And initialize it !
     eval "$(rbenv init -)"
     # Play around with MANPATH
@@ -19,6 +19,5 @@
     export MANPATH="$HOME/.rbenv/versions/${rbenv_version}/share/man:$MANPATH"
     # append .rbenv/bin to PATH
     export PATH=$HOME/.rbenv/shims:$PATH
-    echo "rbenv command is present"
-#fi
+fi
 # vim:filetype=sh foldmethod=marker autoindent expandtab shiftwidth=4
