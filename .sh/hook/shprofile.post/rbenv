@@ -5,6 +5,7 @@
 # This file append PATH with rbenv and initialize it, if present
 # --------------------------------------------------------------------------- #
 
+export PATH=$HOME/.rbenv/bin:$PATH
 if $(command -v rbenv >/dev/null); then
     # And initialize it !
     eval "$(rbenv init -)"
