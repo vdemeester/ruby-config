@@ -9,12 +9,9 @@ This repository contains ruby configuration and tools. It aims to be used with
 
 It currently contains :
 
-* [rbenv][] as a subtree (should sooner or later removed and installed/managed
-  with [babushka][]).
 * zsh completion (for bundle and gem)
 * miscellaneous configurations
 
-[rbenv]: https://github.com/sstephenson/rbenv
 [babushka]: http://babushka.me
 [vcsh-home]: https://github.com/vdemeester/vcsh-home
 [sh-config]: https://github.com/vdemeester/sh-config
