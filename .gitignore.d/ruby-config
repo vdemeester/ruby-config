@@ -13,8 +13,8 @@
 !.sh/completions/_gem
 !.sh/completions/_bundle
 !.sh/hook
-!.sh/hook/shprofile.post
-!.sh/hook/shprofile.post/rbenv
+!.sh/hook/shrc.post
+!.sh/hook/shrc.post/rbenv
 !.sh/hook/shrc.post
 !.sh/hook/shrc.post/irb
 !.sh/hook/zshrc.pre
