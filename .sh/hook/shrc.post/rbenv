@@ -19,6 +19,6 @@ if $(command -v rbenv >/dev/null); then
     fi
     export MANPATH="$HOME/.rbenv/versions/${rbenv_version}/share/man:$MANPATH"
     # append .rbenv/bin to PATH
-    export PATH=$HOME/.rbenv/shims:$PATH
+    # export PATH=$HOME/.rbenv/shims:$PATH
 fi
 # vim:filetype=sh foldmethod=marker autoindent expandtab shiftwidth=4
