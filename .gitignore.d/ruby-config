@@ -1,4 +1,5 @@
 *
+!.gemrc
 !.config
 !.config/mr
 !.config/mr/groups.d
