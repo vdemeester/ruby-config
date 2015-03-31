@@ -20,7 +20,8 @@
 !.sh/hook/shrc.post/irb
 !.sh/hook/zshrc.pre
 !.sh/hook/zshrc.pre/chef
-!.chef
-!.chef/knife.rb
+!.emacs.d
+!.emacs.d/provided
+!.emacs.d/provided/ruby-config.org
 !.gitignore.d
 !.gitignore.d/ruby-config

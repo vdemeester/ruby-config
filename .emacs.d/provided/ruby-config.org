@@ -1,0 +1,12 @@
+* Ruby configuration
+
+   I don't really use [[https://www.ruby-lang.org/][Ruby]] that much but when I need to work on a Ruby project
+   I want to have a decent configuration.
+
+   Tell Emacs rake, bundler files and =*.erb= are Ruby files.
+
+   #+BEGIN_SRC emacs-lisp
+     (dolist (exp '("Rakefile\\'" "\\.rake\\'" "Gemfile\\'" "\\.erb\\'"))
+       (add-to-list 'auto-mode-alist
+                    (cons exp 'ruby-mode)))
+   #+END_SRC
